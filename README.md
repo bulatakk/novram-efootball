@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="assets/novram-logo.svg" width="220" alt="NOVRAM logo">
+﻿<p align="center">
+  <img src="assets/novram-logo.png" width="220" alt="NOVRAM logo">
 </p>
 
 # NOVRAM for eFootball
@@ -79,3 +79,4 @@ NOVRAM is an unofficial community utility. It is **not affiliated with, endorsed
 ## License
 
 The NOVRAM source code in this repository is released under the MIT License. The license applies to NOVRAM source code only and does not grant rights to any KONAMI/eFootball assets or binaries.
+
