@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/novram-logo.svg" width="220" alt="NOVRAM logo">
+</p>
+
 # NOVRAM for eFootball
 
 NOVRAM removes the recurring **"GPU: VRAM 4GB"** startup warning from supported PC builds of eFootball.
@@ -21,6 +25,16 @@ Tested on:
 The first confirmed test system used an **AMD Radeon 680M iGPU** with approximately 512 MB hardware-reserved/dedicated VRAM reported by Windows.
 
 After an eFootball update, NOVRAM should be treated as **unsupported until verified again**.
+
+## Quick start
+
+1. Close eFootball.
+2. Download the current NOVRAM build.
+3. Run **NOVRAM Patcher**.
+4. Wait for `PATCH APPLIED` or `Already patched`.
+5. Launch eFootball normally from Steam.
+
+If the expected binary signature is not found exactly once, NOVRAM aborts without modifying the game.
 
 ## What the patch changes
 
@@ -48,13 +62,13 @@ The patcher:
 
 ## Download
 
-Prebuilt Windows binaries will be published under **GitHub Releases**.
+Prebuilt Windows packages are intended to be published under **GitHub Releases**.
 
-Until a release is available, the source implementation is available in [`src/`](src/).
+The auditable source implementation is available in [`src/`](src/).
 
 ## Source
 
-The repository contains the original PowerShell patch implementation and the Windows launcher source used for the desktop build.
+The repository contains the PowerShell patch implementation, Windows launcher source, and launcher script.
 
 The patch is intentionally signature-based rather than hard-coded to a naked file offset, so an unexpected binary layout causes a safe failure instead of blindly writing bytes.
 
