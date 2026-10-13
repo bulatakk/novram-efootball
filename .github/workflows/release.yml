@@ -1,0 +1,25 @@
+﻿name: Publish release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: NOVRAM ${{ github.ref_name }}
+          body_path: RELEASE_NOTES.md
+          files: |
+            release/NOVRAM-v1.0.0-win64.zip
+          fail_on_unmatched_files: true
